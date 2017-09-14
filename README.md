@@ -10,7 +10,7 @@ cython algos.pyx
 python setup.py build_ext --inplace
 ```
 
-It implemets Algorithm 3 of Cuturi, which is the main computational routine.
+It implements Algorithm 3 of Cuturi, which is the main computational routine.
 
 algos_cuturi.py Implements Algorithm 1 and Algorithm 2 of Cuturi
 
@@ -36,7 +36,7 @@ k: number of atoms in local clusters (if method = 'LC' - number of atoms in the 
 
 n_iter: number of iterations of the main algorithm
 
-weight: Wheather to use a scaling factor 1/M when updating local barycenters. True is recommended
+weight: Whether to use a scaling factor 1/M when updating local barycenters. True is recommended
 
 verbose: if 1, objective function value will be printed on every iteration and total running time
 
@@ -60,8 +60,8 @@ truth: can be used by score function later
 Returns:
 H_: list of atoms of global barycenters  
 a_: list of weights of atoms of global barycenters  
-Y_: list of atoms of local barycenters (equal to len(Z)*[S] for LC method)  
-b_: lsit of weights of atoms of local barycneters  
+Y_: list of atoms of local barycenters (equal to len(data)*|S| for LC method)  
+b_: list of weights of atoms of local barycenters  
 S_: array of atoms in the constraint set (only if method = 'LC')  
 labels_: list of label assignments of groups to global clusters  
 
